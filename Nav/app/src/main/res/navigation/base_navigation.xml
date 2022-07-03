@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_navigation"
+    app:startDestination="@id/homefragment">
+
+    <fragment
+        android:id="@+id/homefragment"
+        android:name="com.example.lesson3.homefragment"
+        android:label="fragment_homefragment"
+        tools:layout="@layout/fragment_homefragment" >
+        <action
+            android:id="@+id/action_homefragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homefragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.lesson3.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_examFragment"
+            app:destination="@id/examFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.lesson3.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_helpFragment"
+            app:destination="@id/helpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/examFragment"
+        android:name="com.example.lesson3.examFragment"
+        android:label="fragment_exam"
+        tools:layout="@layout/fragment_exam" />
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.example.lesson3.helpFragment"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help" />
+</navigation>
